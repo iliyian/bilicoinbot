@@ -4,7 +4,7 @@ import config
 
 # cookie = config.bili_cookie
 
-rwd_url = 'https://api.bilibili.com/x/member/web/exp/reward'
+rwd_url = 'http://www.bilibili.com/plus/account/exp.php'
 nav_url = 'https://api.bilibili.com/x/web-interface/nav'
 
 headers = {
@@ -17,7 +17,7 @@ headers = {
 def getRwdedCoin(cookie):
     r = requests.get(rwd_url, headers=headers, cookies=cookie)
     rwd = json.loads(r.text)
-    return rwd['data']['coins']
+    return rwd['number']
 
 def getNav(cookie):
     r = requests.get(nav_url, headers=headers, cookies=cookie)
