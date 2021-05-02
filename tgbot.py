@@ -55,6 +55,7 @@ def login_command(update: Update, _: CallbackContext):
         )
     # else:
     #     update.message.reply_text('你已经上船啦~~所以不可以再登一次哦~=_=')
+    save()
 
 def verify_command(update: Update, _: CallbackContext):
     username = update.message.from_user.username
@@ -79,6 +80,7 @@ def verify_command(update: Update, _: CallbackContext):
         update.message.reply_text('你已经上船啦~~所以可以开始投币了哦 用 /account 或 /coin 试试康')
     else:
         update.message.reply_text('请先扫描二维码哦~~')
+    save()
 
 def account_command(update: Update, _: CallbackContext):
     username = update.message.from_user.username
