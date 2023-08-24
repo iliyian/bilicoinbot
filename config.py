@@ -1,1 +1,1 @@
-tgbot_token= ''
+tgbot_token= '1740932576:AAG1MjrMKttIiu_RB6csavpBahKGKueJOfg'
